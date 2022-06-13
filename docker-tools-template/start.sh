@@ -8,7 +8,7 @@ DIRNAME=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 REPO_DIR="$(dirname "$DIRNAME")"
 
 # Cd to the dir where this script is located
-cd "$DIRNAME"
+cd $DIRNAME
 
 ### get the name of the repository
 REPO_NAME=$(basename -s .git `git config --get remote.origin.url`)
@@ -33,9 +33,8 @@ if [ ! -f "$DOCKER_SETTINGS_FILE" ]; then
 fi
 
 ## copy dockerSettings.json into the copy-to-docker-folder
-[ -f copy-to-docker-container/dockerSettings.json ] \
-&& rm copy-to-docker-container/dockerSettings.json
-cp "$DOCKER_SETTINGS_FILE" copy-to-docker-container/dockerSettings.json
+rm copy-to-docker-container/dockerSettings.json
+cp $DOCKER_SETTINGS_FILE copy-to-docker-container/dockerSettings.json
 
 echo ""
 echo "CREATING DOCKER VOLUME $REPO_NAME-storage"
