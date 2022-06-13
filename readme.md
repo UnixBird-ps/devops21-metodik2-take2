@@ -1,10 +1,10 @@
 # devops21-metodik2-groupwork
-      
-A school assignment group work on CI/CD for course DevOps Metodik 2 using Docker.
-      
-      
-      
-      
+
+A school assignment group work on CI/CD for course DevOps Metodik 2 using Docker.  
+  
+  
+  
+  
 Hello developer!
 
 This is a message from your friendly DevOps team!
@@ -18,7 +18,7 @@ For this purpose we have chosen Docker in conjunction with our own setup for aut
 
 We will start with 
 * different teams in the same main project having the code for their service in team specific branches. The following are the protected branches:
-  * template-dev (for DevOps team's use)  
+  * template-dev (for DevOps team's use)
   * dev-iframer (for iframer team)
   * dev-world-map-backend (for world-map team)
   * dev-country-info-backend (for countries team)
