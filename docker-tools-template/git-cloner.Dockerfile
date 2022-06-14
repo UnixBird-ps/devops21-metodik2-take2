@@ -1,6 +1,5 @@
-
-# If Debian
-FROM node:16.15-bullseye
+# start with a debian node container
+FROM node:16.15.0-bullseye
 
 # Install git
 RUN apt-get update
