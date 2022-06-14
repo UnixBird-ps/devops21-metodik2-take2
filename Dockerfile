@@ -3,7 +3,7 @@
 
 FROM nginx:1.22.0-alpine
 
-COPY ./frontend/ /usr/share/nginx/html/
+#COPY ./frontend/ /usr/share/nginx/html/
 COPY ./nginx-default.conf /etc/nginx/conf.d/default.conf
 
 CMD rm -r /usr/share/nginx/html \
