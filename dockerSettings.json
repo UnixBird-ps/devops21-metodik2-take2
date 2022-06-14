@@ -1,10 +1,30 @@
 [
-  "dev-proxy-ps-work-in-progress",
+  "dev-proxy-ps-work",
   [
     4000
   ],
-  "dev-iframer-ps-work-in-progress",
+  "dev-iframer-ps-work",
   [
     4001
+  ],
+  "dev-world-map-backend-ps-work",
+  [
+    4002
+  ],
+  "dev-country-info-backend-ps-work",
+  [
+    4003
+  ],
+  "dev-country-info-db-ps-work",
+  [
+    4004
+  ],
+  "dev-capital-info-backend-ps-work",
+  [
+    4005
+  ],
+  "dev-capital-info-db-ps-work",
+  [
+    4006
   ]
 ]
