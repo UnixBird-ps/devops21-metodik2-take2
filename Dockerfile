@@ -3,8 +3,8 @@
 
 FROM nginx:1.22.0-alpine
 
-#COPY ./frontend-source/ /usr/share/nginx/html/
-#COPY ./nginx-conf-source/*.conf /etc/nginx/conf.d/
+COPY ./frontend/ /usr/share/nginx/html/
+COPY ./nginx-default.conf /etc/nginx/conf.d/default.conf
 
 CMD rm -r /usr/share/nginx/html \
 && ln -s $(pwd) /usr/share/nginx/html \
