@@ -3,7 +3,7 @@ FROM nginx:1.21.6
 
 RUN rm /usr/share/nginx/html/*
 
-COPY ./nginx-default.conf /etc/nginx/conf.d/
+COPY ./nginx-default.conf /etc/nginx/conf.d/default.conf
 
 ENV NGINX_PORT=4000
 
