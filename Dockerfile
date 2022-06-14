@@ -10,6 +10,4 @@ FROM node:16.15.0-alpine3.15
 
 #COPY ./world-map-src/ /app/
 
-#&& npm run build \
-
-CMD cd /app && npm run dev
+CMD npm install && npm run dev
