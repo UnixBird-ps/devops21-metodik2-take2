@@ -49,7 +49,7 @@ ALLOW_EMPTY_PASSWORD=yes
 
 #USER 1001
 
-ENTRYPOINT [ "/opt/bitnami/scripts/mysql/entrypoint.sh" ]
+#ENTRYPOINT [ "/opt/bitnami/scripts/mysql/entrypoint.sh" ]
 
 #CMD \
 #echo "
