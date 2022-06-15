@@ -41,18 +41,23 @@ FROM bitnami/mysql:8.0.29
 #ENV MYSQL_TCP_PORT=$PORT
 
 ENV \
-ALLOW_EMPTY_PASSWORD=yes \
-MYSQL_PORT_NUMBER=$PORT
+ALLOW_EMPTY_PASSWORD=yes
+# \
+#MYSQL_PORT_NUMBER=$PORT
 
-EXPOSE $PORT
+#EXPOSE $PORT
 
-#RUN \
+#USER 1001
+
+ENTRYPOINT [ "/opt/bitnami/scripts/mysql/entrypoint.sh" ]
+
+#CMD \
 #echo "
 #[mysqld]
 #skip-bind-address
 #port=$PORT
-#" > /etc/mysql/conf.d/custom-conf.cnf
+#" > /etc/mysql/conf.d/custom-conf.cnf \
 
-#ENTRYPOINT [ "docker-entrypoint.sh" ]
-
-#CMD mysqld && --user=mysql && --port $PORT
+CMD \
+MYSQL_PORT_NUMBER=$PORT
+&& /opt/bitnami/scripts/mysql/run.sh
