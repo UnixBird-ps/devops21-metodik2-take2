@@ -58,6 +58,4 @@ ALLOW_EMPTY_PASSWORD=yes
 #port=$PORT
 #" > /etc/mysql/conf.d/custom-conf.cnf \
 
-CMD \
-/opt/bitnami/scripts/mysql/run.sh \
--- MYSQL_PORT_NUMBER=$PORT \
+CMD MYSQL_PORT_NUMBER=$PORT /opt/bitnami/scripts/mysql/entrypoint.sh /opt/bitnami/scripts/mysql/run.sh
