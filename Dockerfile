@@ -59,5 +59,5 @@ ENTRYPOINT [ "/opt/bitnami/scripts/mysql/entrypoint.sh" ]
 #" > /etc/mysql/conf.d/custom-conf.cnf \
 
 CMD \
-MYSQL_PORT_NUMBER=$PORT
-&& /opt/bitnami/scripts/mysql/run.sh
+MYSQL_PORT_NUMBER=$PORT \
+/opt/bitnami/scripts/mysql/run.sh
