@@ -26,9 +26,9 @@ FROM bitnami/mysql:8.0.29
 #ENV MYSQL_USER=countries-user
 #ENV MARIADB_USER=countries-user
 
-#ENV ALLOW_EMPTY_PASSWORD=yes
-#ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes
-#ENV MARIADB_ALLOW_EMPTY_PASSWORD=yes
+ENV ALLOW_EMPTY_PASSWORD=yes
+ENV MYSQL_ALLOW_EMPTY_PASSWORD=yes
+ENV MARIADB_ALLOW_EMPTY_PASSWORD=yes
 
 #ENV ALLOW_EMPTY_ROOT_PASSWORD=yes
 #ENV MYSQL_ALLOW_EMPTY_ROOT_PASSWORD=yes
@@ -36,18 +36,11 @@ FROM bitnami/mysql:8.0.29
 
 #ENV MARIADB_RANDOM_ROOT_PASSWORD=yes
 
-#ENV MYSQL_PORT_NUMBER=$PORT
-#ENV MARIADB_PORT_NUMBER=$PORT
-#ENV MYSQL_TCP_PORT=$PORT
+ENV MYSQL_TCP_PORT=$PORT
+ENV MYSQL_PORT_NUMBER=$PORT
+ENV MARIADB_PORT_NUMBER=$PORT
 
-ENV \
-ALLOW_EMPTY_PASSWORD=yes
-# \
-#MYSQL_PORT_NUMBER=$PORT
-
-#EXPOSE $PORT
-
-#USER 1001
+EXPOSE $PORT
 
 #ENTRYPOINT [ "/opt/bitnami/scripts/mysql/entrypoint.sh" ]
 
@@ -58,4 +51,4 @@ ALLOW_EMPTY_PASSWORD=yes
 #port=$PORT
 #" > /etc/mysql/conf.d/custom-conf.cnf \
 
-CMD MYSQL_PORT_NUMBER=$PORT /opt/bitnami/scripts/mysql/entrypoint.sh /opt/bitnami/scripts/mysql/run.sh
+#CMD MYSQL_PORT_NUMBER=$PORT /opt/bitnami/scripts/mysql/entrypoint.sh /opt/bitnami/scripts/mysql/run.sh
