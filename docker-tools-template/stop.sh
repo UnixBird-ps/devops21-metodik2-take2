@@ -34,11 +34,9 @@ docker volume rm -f $REPO_NAME-storage
 ### (for now node_modules)
 echo ""
 echo "Removing node_modules folder (if it exists)"
-[ -d $REPO_DIR/node_modules ] && rm -r $REPO_DIR/node_modules
+rm -r $REPO_DIR/node_modules
 
 echo ""
 echo "Containers, images and volume removed!"
 echo "(Kept the docker image to speed up next start...)"
 echo ""
-
-
